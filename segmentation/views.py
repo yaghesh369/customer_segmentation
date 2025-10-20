@@ -8,7 +8,9 @@ import matplotlib.pyplot as plt
 import os
 from django.conf import settings
 
-model = joblib.load('segmentation/kmeans_model.joblib')
+
+model_path = os.path.join(settings.BASE_DIR, 'segmentation', 'kmeans_model.joblib')
+model = joblib.load(model_path)
 
 CLUSTER_DESCRIPTIONS = {
     0: "Cluster 0: Young customers with low to moderate income and variable spending.",
