@@ -13,9 +13,9 @@ model_path = os.path.join(settings.BASE_DIR, 'segmentation', 'kmeans_model.jobli
 model = joblib.load(model_path)
 
 CLUSTER_DESCRIPTIONS = {
-    0: "Cluster 0: Young customers with low to moderate income and variable spending.",
-    1: "Cluster 1: Middle-aged customers with moderate income and higher spending patterns.",
-    2: "Cluster 2: Older customers with higher income but lower spending scores.",
+    0: "Older customers with higher income but lower spending scores, likely conservative spenders.",
+    1: "Younger customers with moderate income and high spending scores, active and trend-focused.",
+    2: "Middle-aged customers with lower income and moderate spending, price sensitive and moderately engaged.",
 }
 
 def home(request):
